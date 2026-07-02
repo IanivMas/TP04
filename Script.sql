@@ -4,6 +4,12 @@
 -- 11 jugadores reales por seleccion (once probable)
 -- =========================================================
 
+CREATE DATABASE Album;
+GO
+
+USE Album;
+GO
+
 CREATE TABLE Jugador (
     ID               INT PRIMARY KEY IDENTITY(1,1),
     Nombre           NVARCHAR(100) NOT NULL,
@@ -128,7 +134,6 @@ SELECT * FROM Jugador ORDER BY Seleccion, ID;
 CREATE TABLE Figurita (
     ID               INT PRIMARY KEY IDENTITY(1,1),
     IDJugador        INT NOT NULL,
-    NombreJugador    NVARCHAR(100) NOT NULL,
     Cantidad         INT NOT NULL DEFAULT 0,
     Estado           BIT NOT NULL DEFAULT 0,
     FOREIGN KEY (IDJugador) REFERENCES Jugador(ID)
@@ -140,108 +145,108 @@ GO
 -- =========================================================
 
 -- ARGENTINA
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (1, 'Emiliano Martinez', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (2, 'Nahuel Molina', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (3, 'Cristian Romero', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (4, 'Lisandro Martinez', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (5, 'Nicolas Tagliafico', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (6, 'Rodrigo De Paul', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (7, 'Enzo Fernandez', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (8, 'Alexis Mac Allister', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (9, 'Lionel Messi', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (10, 'Julian Alvarez', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (11, 'Lautaro Martinez', 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (1, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (2, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (3, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (4, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (5, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (6, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (7, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (8, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (9, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (10, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (11, 0, 0);
 
 -- BRASIL
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (12, 'Alisson Becker', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (13, 'Danilo', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (14, 'Marquinhos', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (15, 'Gabriel Magalhaes', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (16, 'Alex Sandro', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (17, 'Casemiro', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (18, 'Bruno Guimaraes', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (19, 'Lucas Paqueta', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (20, 'Vinicius Junior', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (21, 'Neymar Jr', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (22, 'Raphinha', 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (12, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (13, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (14, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (15, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (16, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (17, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (18, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (19, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (20, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (21, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (22, 0, 0);
 
 -- FRANCIA
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (23, 'Mike Maignan', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (24, 'Jules Kounde', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (25, 'William Saliba', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (26, 'Theo Hernandez', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (27, 'Lucas Hernandez', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (28, 'Aurelien Tchouameni', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (29, 'Adrien Rabiot', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (30, 'Kylian Mbappe', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (31, 'Ousmane Dembele', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (32, 'Antoine Griezmann', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (33, 'Bradley Barcola', 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (23, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (24, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (25, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (26, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (27, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (28, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (29, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (30, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (31, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (32, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (33, 0, 0);
 
 -- ESPANA
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (34, 'Unai Simon', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (35, 'Marc Pubill', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (36, 'Pau Cubarsi', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (37, 'Robin Le Normand', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (38, 'Marc Cucurella', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (39, 'Pedri', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (40, 'Gavi', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (41, 'Fabian Ruiz', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (42, 'Lamine Yamal', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (43, 'Dani Olmo', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (44, 'Mikel Oyarzabal', 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (34, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (35, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (36, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (37, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (38, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (39, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (40, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (41, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (42, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (43, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (44, 0, 0);
 
 -- PORTUGAL
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (45, 'Diogo Costa', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (46, 'Diogo Dalot', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (47, 'Ruben Dias', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (48, 'Goncalo Inacio', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (49, 'Nuno Mendes', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (50, 'Joao Neves', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (51, 'Vitinha', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (52, 'Bruno Fernandes', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (53, 'Bernardo Silva', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (54, 'Cristiano Ronaldo', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (55, 'Pedro Neto', 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (45, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (46, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (47, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (48, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (49, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (50, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (51, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (52, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (53, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (54, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (55, 0, 0);
 
 -- INGLATERRA
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (56, 'Jordan Pickford', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (57, 'Trent Alexander-Arnold', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (58, 'John Stones', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (59, 'Marc Guehi', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (60, 'Kyle Walker', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (61, 'Declan Rice', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (62, 'Jude Bellingham', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (63, 'Cole Palmer', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (64, 'Bukayo Saka', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (65, 'Harry Kane', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (66, 'Phil Foden', 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (56, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (57, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (58, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (59, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (60, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (61, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (62, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (63, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (64, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (65, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (66, 0, 0);
 
 -- ALEMANIA
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (67, 'Manuel Neuer', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (68, 'Joshua Kimmich', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (69, 'Antonio Rudiger', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (70, 'Jonathan Tah', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (71, 'David Raum', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (72, 'Robert Andrich', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (73, 'Florian Wirtz', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (74, 'Jamal Musiala', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (75, 'Leroy Sane', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (76, 'Kai Havertz', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (77, 'Serge Gnabry', 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (67, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (68, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (69, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (70, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (71, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (72, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (73, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (74, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (75, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (76, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (77, 0, 0);
 
 -- URUGUAY
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (78, 'Sergio Rochet', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (79, 'Jose Gimenez', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (80, 'Ronald Araujo', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (81, 'Mathias Olivera', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (82, 'Guillermo Varela', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (83, 'Manuel Ugarte', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (84, 'Rodrigo Bentancur', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (85, 'Federico Valverde', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (86, 'Darwin Nunez', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (87, 'Facundo Pellistri', 0, 0);
-INSERT INTO Figurita (IDJugador, NombreJugador, Cantidad, Estado) VALUES (88, 'Maximiliano Araujo', 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (78, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (79, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (80, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (81, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (82, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (83, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (84, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (85, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (86, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (87, 0, 0);
+INSERT INTO Figurita (IDJugador, Cantidad, Estado) VALUES (88, 0, 0);
 GO
 
 SELECT * FROM Figurita ORDER BY ID;
